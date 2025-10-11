@@ -4,10 +4,14 @@ export default function NavigationBar() {
     return (
         <div className='navigation-bar'>
             <div className='navigation-bar-left'>
-                Navigation bar left
+                <div>
+                    Navigation bar left
+                </div>
             </div>
             <div className='navigation-bar-right'>
-                Navigation bar right
+                <div>
+                    Navigation bar right
+                </div>
             </div>
         </div>
     );

@@ -4,13 +4,48 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
 
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 90%;
+}
+
+/* .header-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+} */
+
+.header-right-container {
+    display: flex;
+    flex-direction: columm;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 15%;
+    border-left: 1px solid black;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 70%;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }

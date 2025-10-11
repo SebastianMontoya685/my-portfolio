@@ -3,10 +3,12 @@ import './App.css';
 import Header from './components/Home/Header.tsx';
 import ProjectSection from './components/ProjectSection/ProjectSection.tsx';
 import Footer from './components/Footer/Footer.tsx';
+import NavigationBar from './components/navigation/NavigationBar.tsx';
 
 function App() {
   return (
     <div className="App">
+      <NavigationBar />     
       <Header />
       <ProjectSection />
       <Footer />
