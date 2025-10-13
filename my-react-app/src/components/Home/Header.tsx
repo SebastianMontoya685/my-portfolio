@@ -7,9 +7,9 @@ export default function Header() {
             <div className='header'>
                 {/* <div className='header-left-container'> */}
                 <div className='header-left'>
-                    <h1>Sebastian Montoya</h1>
+                    <h1 className='header-title'>Sebastian Montoya</h1>
                     <p>Backend, Frontend, and AI Developer</p>
-                    <button>See Projects</button>
+                    <button className='header-button'>See Projects</button>
                 </div>
                 {/* </div> */}
                 <div className='header-right-container'>
