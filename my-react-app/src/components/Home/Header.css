@@ -32,6 +32,7 @@
     height: 50%;
     width: 15%;
     border-left: 1px solid black;
+    margin-right: 5vw;
 }
 
 .header-left {
@@ -41,6 +42,7 @@
     align-items: flex-start;
     text-align: left;
     width: 70%;
+    margin-left: 5vw;
 }
 
 .header-right {
