@@ -7,18 +7,10 @@
     height: 10%;
 }
 
-/* .navigation-bar-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
+.navigation-bar-left {
+    margin-left: 5vw;
 }
 
 .navigation-bar-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    width: 50%;
-} */
+    margin-right: 5vw;
+}
