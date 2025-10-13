@@ -1,3 +1,21 @@
 .project-navigation {
     height: 25%;
 }
+
+.project-navigation button {
+    background-color: #fff;
+    border: 1.5px solid #111;
+    border-radius: 13px;
+    padding: 0.85vh 0.85vw;
+    font: roboto sans-serif monospace;
+    transition: all 0.3s ease;
+    cursor : pointer;
+    margin-right: 1vw;
+}           
+
+.project-navigation button:hover {
+    background: #f9f9f9;
+    border-color: #bbb;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 1px 1px 2px 2.5px rgba(0, 0, 0, 0.1);
+}   
