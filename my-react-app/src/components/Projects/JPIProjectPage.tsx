@@ -2,60 +2,30 @@ import React from 'react';
 import Folder from '../ProjectSection/Folder.tsx';
 import './ProjectsPage.css';
 
-export default function ProjectsPage() {
+export default function JPIProjectPage() {
     const [selectedImage, setSelectedImage] = React.useState<number | null>(null);
 
-    // Project data with images and descriptions
+    // JPI Education project data with images and descriptions
     const projectData = [
         {
-            image: "/e-invoicing-homedark.jpg",
-            title: "Dark Theme Home Page",
-            description: "The main landing page featuring a sleek dark theme design. This page showcases the modern UI/UX approach with intuitive navigation and clean typography. Users can easily access all major features from this central hub."
+            image: "/JPIeducationlogo.webp",
+            title: "JPI Education Brand Identity",
+            description: "The official JPI Education logo showcasing the brand's commitment to educational excellence. The design represents innovation in learning and professional development with clean, modern typography and symbolic elements."
         },
         {
-            image: "/e-invoicingdashboard.jpg",
-            title: "Main Dashboard",
-            description: "The primary dashboard provides users with a comprehensive overview of their invoicing activities. Features include recent transactions, pending invoices, and quick action buttons for common tasks like creating new invoices."
-        },
-        {
-            image: "/e-invoicingdashboard2.jpg",
-            title: "Analytics Dashboard",
-            description: "Advanced analytics and reporting dashboard showing detailed insights into invoicing patterns, revenue trends, and business metrics. Interactive charts and graphs help users make data-driven decisions."
-        },
-        {
-            image: "/e-invoicingdashboard3.jpg",
-            title: "Invoice Management",
-            description: "Dedicated invoice management interface allowing users to create, edit, and track invoices. Features include template selection, client management, and automated invoice generation with customizable fields."
-        },
-        {
-            image: "/e-invoicingfiles.jpg",
-            title: "File Management System",
-            description: "Robust file management system for organizing and storing invoice-related documents. Users can upload, categorize, and search through files with advanced filtering options and secure cloud storage."
-        },
-        {
-            image: "/e-invoicinghistory.jpg",
-            title: "Transaction History",
-            description: "Comprehensive transaction history view displaying all past invoicing activities. Features include search functionality, date filtering, and detailed transaction records with payment status tracking."
-        },
-        {
-            image: "/e-invoicinghome.jpg",
-            title: "Light Theme Home",
-            description: "Alternative light theme version of the home page, providing users with theme customization options. Maintains the same functionality while offering a different visual experience for user preference."
-        },
-        {
-            image: "/e-invoicinglogin.jpg",
-            title: "Secure Login Portal",
-            description: "Secure authentication system with modern login interface. Features include multi-factor authentication, password recovery, and session management to ensure user data protection and system security."
+            image: "/jpiprojectoffice.webp",
+            title: "Modern Learning Environment",
+            description: "State-of-the-art office and learning spaces designed to foster collaboration and innovation. The contemporary workspace reflects JPI Education's forward-thinking approach to educational technology and student engagement."
         }
     ];
 
-    // E-invoicing project images as folder contents
+    // JPI project images as folder contents
     const folderItems = projectData.map((item, index) => (
         <img 
             key={index}
             src={item.image} 
             alt={item.title} 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }} 
+            style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px', cursor: 'pointer', backgroundColor: 'white' }} 
             onClick={() => setSelectedImage(index)}
         />
     ));
@@ -78,7 +48,7 @@ export default function ProjectsPage() {
                     textAlign: 'center',
                     marginBottom: '1rem'
                 }}>
-                    E-Invoicing Project
+                    JPI Education Project
                 </h1>
 
                 {/* Project Overview Description */}
@@ -90,7 +60,7 @@ export default function ProjectsPage() {
                     borderRadius: '12px',
                     boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                     marginBottom: '2rem',
-                    border: '2px solid #5227FF20'
+                    border: '2px solid #00D4AA20'
                 }}>
                     <p style={{
                         fontSize: '1.2rem',
@@ -100,7 +70,7 @@ export default function ProjectsPage() {
                         textAlign: 'center',
                         fontWeight: '400'
                     }}>
-                        An end-to-end e‑invoicing platform that turns raw invoice files into structured, validated e‑invoices and delivers them to recipients. It removes manual data entry, standardizes invoices into UBL, and provides a simple flow to verify and send invoices.
+                        A comprehensive educational technology platform designed to revolutionize learning experiences through innovative digital solutions. JPI Education combines modern web technologies with educational best practices to create engaging, scalable learning environments.
                     </p>
                     
                     {/* Technical Features */}
@@ -115,7 +85,7 @@ export default function ProjectsPage() {
                                 <div style={{
                                     width: '8px',
                                     height: '8px',
-                                    backgroundColor: '#5227FF',
+                                    backgroundColor: '#00D4AA',
                                     borderRadius: '50%',
                                     marginTop: '0.5rem',
                                     flexShrink: 0
@@ -127,14 +97,14 @@ export default function ProjectsPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Automated UBL standardization and validation
+                                    Real-time collaborative learning platform
                                 </p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                                 <div style={{
                                     width: '8px',
                                     height: '8px',
-                                    backgroundColor: '#5227FF',
+                                    backgroundColor: '#00D4AA',
                                     borderRadius: '50%',
                                     marginTop: '0.5rem',
                                     flexShrink: 0
@@ -146,7 +116,7 @@ export default function ProjectsPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Real-time invoice processing and delivery
+                                    Advanced student progress tracking
                                 </p>
                             </div>
                         </div>
@@ -155,7 +125,7 @@ export default function ProjectsPage() {
                                 <div style={{
                                     width: '8px',
                                     height: '8px',
-                                    backgroundColor: '#5227FF',
+                                    backgroundColor: '#00D4AA',
                                     borderRadius: '50%',
                                     marginTop: '0.5rem',
                                     flexShrink: 0
@@ -167,14 +137,14 @@ export default function ProjectsPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Secure file management and storage system
+                                    Scalable cloud-based infrastructure
                                 </p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                                 <div style={{
                                     width: '8px',
                                     height: '8px',
-                                    backgroundColor: '#5227FF',
+                                    backgroundColor: '#00D4AA',
                                     borderRadius: '50%',
                                     marginTop: '0.5rem',
                                     flexShrink: 0
@@ -186,7 +156,7 @@ export default function ProjectsPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Interactive analytics and reporting dashboard
+                                    Interactive content management system
                                 </p>
                             </div>
                         </div>
@@ -220,7 +190,9 @@ export default function ProjectsPage() {
                                         width: '100%',
                                         height: 'auto',
                                         borderRadius: '8px',
-                                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)'
+                                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
+                                        objectFit: 'contain',
+                                        backgroundColor: 'white'
                                     }}
                                 />
                             </div>
@@ -251,7 +223,7 @@ export default function ProjectsPage() {
                                     style={{
                                         alignSelf: 'flex-start',
                                         padding: '0.5rem 1rem',
-                                        backgroundColor: '#5227FF',
+                                        backgroundColor: '#00D4AA',
                                         color: 'white',
                                         border: 'none',
                                         borderRadius: '6px',
@@ -276,7 +248,7 @@ export default function ProjectsPage() {
                     color: '#666',
                     marginBottom: '2rem'
                 }}>
-                    Click on the folder below to explore different aspects of the E-Invoicing project. Each paper contains screenshots and details about specific features and functionality.
+                    Click on the folder below to explore different aspects of the JPI Education project. Each paper contains brand assets and workspace imagery showcasing the educational technology platform.
                 </p>
                 
                 <div style={{ 
@@ -289,7 +261,7 @@ export default function ProjectsPage() {
                 }}>
                     <Folder 
                         size={2.5} 
-                        color="#5227FF" 
+                        color="#00D4AA" 
                         className="project-folder"
                         items={folderItems}
                     />
@@ -298,5 +270,3 @@ export default function ProjectsPage() {
         </div>
     );
 }
-
-

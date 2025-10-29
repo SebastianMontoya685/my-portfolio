@@ -7,6 +7,7 @@ import NavigationBar from './components/navigation/NavigationBar.tsx';
 import WorkExperience from './components/WorkExperience/WorkExperience.tsx';
 import JPIPage from './components/JPI Page/JPIPage.tsx';
 import ProjectsPage from './components/Projects/ProjectsPage.tsx';
+import JPIProjectPage from './components/Projects/JPIProjectPage.tsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import ScrollSection from './components/WorkExperience2/ScrollSection';
 function App() {
@@ -34,6 +35,13 @@ function App() {
             <>
             <NavigationBar />
             <JPIPage />
+            <Footer />
+          </>
+          } />
+          <Route path="/jpi-project" element={
+            <>
+            <NavigationBar />
+            <JPIProjectPage />
             <Footer />
           </>
           } />
