@@ -1,0 +1,9 @@
+backend/MyPortfolioApplication.class
+backend/services/DynamoDbService.class
+backend/entities/ContactRequest.class
+backend/clients/LambdaHttpClient.class
+backend/services/ContactService.class
+backend/controllers/DynamoController.class
+backend/controllers/ContactController.class
+backend/config/CorsConfig.class
+backend/controllers/LambdaController.class

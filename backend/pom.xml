@@ -36,6 +36,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>lambda</artifactId>
+            <version>2.25.39</version>
+        </dependency>
+
+        <!-- Add to backend/pom.xml inside <dependencies> -->
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>dynamodb</artifactId>
+            <version>2.25.39</version>
+        </dependency>
     </dependencies>
 
     <build>
