@@ -15,3 +15,9 @@ code {
 html {
   scroll-behavior: smooth;
 }
+
+/* Global button styles for better text visibility */
+button {
+  font-weight: 600 !important;
+  color: #111 !important;
+}

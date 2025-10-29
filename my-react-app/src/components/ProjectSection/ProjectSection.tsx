@@ -19,6 +19,12 @@ const eInvoicingImages = [
     '/e-invoicinglogin.jpg'
 ];
 
+// JPI Education project images
+const jpiEducationImages = [
+    '/JPIeducationlogo.webp',
+    '/jpiprojectoffice.webp'
+];
+
 const projectImages = [
     projectImage,
     projectImage,
@@ -30,7 +36,13 @@ export default function ProjectSection() {
     const navigate = useNavigate();
     
     const handleProjectClick = () => {
-        navigate('/projects');
+        if (selected === 2) {
+            // Navigate to JPI project page for JPI Education
+            navigate('/jpi-project');
+        } else {
+            // Navigate to general projects page for other projects
+            navigate('/projects');
+        }
     };
     
     return (
@@ -43,6 +55,15 @@ export default function ProjectSection() {
                         images={eInvoicingImages} 
                         autoAdvanceInterval={3000} 
                         onImageClick={handleProjectClick}
+                    />
+                </div>
+            ) : selected === 2 ? (
+                <div className='project-display'>
+                    <ProjectSlideshow 
+                        images={jpiEducationImages} 
+                        autoAdvanceInterval={4000} 
+                        onImageClick={handleProjectClick}
+                        objectFit={['contain', 'cover']}
                     />
                 </div>
             ) : (

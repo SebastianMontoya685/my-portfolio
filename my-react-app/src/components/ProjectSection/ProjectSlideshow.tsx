@@ -5,9 +5,10 @@ type ProjectSlideshowProps = {
     images: string[];
     autoAdvanceInterval?: number;
     onImageClick?: () => void;
+    objectFit?: 'cover' | 'contain' | ('cover' | 'contain')[];
 };
 
-export default function ProjectSlideshow({ images, autoAdvanceInterval = 3000, onImageClick }: ProjectSlideshowProps) {
+export default function ProjectSlideshow({ images, autoAdvanceInterval = 3000, onImageClick, objectFit = 'cover' }: ProjectSlideshowProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -36,6 +37,14 @@ export default function ProjectSlideshow({ images, autoAdvanceInterval = 3000, o
         return <div className="slideshow-placeholder">No images available</div>;
     }
 
+    // Determine object-fit for current image
+    const getCurrentObjectFit = () => {
+        if (Array.isArray(objectFit)) {
+            return objectFit[currentIndex] || 'cover';
+        }
+        return objectFit;
+    };
+
     return (
         <div className="project-slideshow">
             <div className="slideshow-container">
@@ -44,7 +53,10 @@ export default function ProjectSlideshow({ images, autoAdvanceInterval = 3000, o
                     alt={`Project slide ${currentIndex + 1}`} 
                     className="slideshow-image"
                     onClick={onImageClick}
-                    style={{ cursor: onImageClick ? 'pointer' : 'default' }}
+                    style={{ 
+                        cursor: onImageClick ? 'pointer' : 'default',
+                        objectFit: getCurrentObjectFit()
+                    }}
                 />
                 
                 {images.length > 1 && (
