@@ -28,3 +28,11 @@
     border-radius: 13px;
     /* overflow: hidden; */
 }
+
+.project-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 13px;
+}

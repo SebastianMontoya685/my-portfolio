@@ -1,0 +1,39 @@
+.footer-socials {
+    display: flex;
+    flex-direction: column; /* stack top-to-bottom */
+    align-items: flex-end; /* align to the right side */
+    justify-content: space-evenly; /* spread items to fill vertical space */
+    gap: 14px;
+    height: 100%;
+}
+
+.social-item {
+    display: grid; /* fixed icon column for perfect alignment */
+    grid-template-columns: 36px auto; /* icon box + label */
+    align-items: center;
+    column-gap: 10px;
+    color: #333333;
+}
+
+.icon-box {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+}
+
+.icon-box svg {
+    width: 26px;
+    height: 26px;
+}
+
+.social-item span {
+    font: roboto sans-serif monospace;
+    font-weight: 800;
+    font-size: 1.35rem;
+}
+
+.social-item:hover {
+    color: #000000;
+}
+

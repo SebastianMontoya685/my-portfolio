@@ -1,7 +1,13 @@
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 25vh;
+    height: 24vh; /* tighten vertical whitespace */
+    /* Constrain width so left/right columns aren't at extreme edges */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto; /* center within page */
+    padding: 0 5vw; /* match navbar gutters on smaller screens */
+    box-sizing: border-box;
 }

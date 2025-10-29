@@ -1,15 +1,18 @@
 import React from 'react';
 import './ProjectNavigation.css';
-import projectImage from '../../ryan-klaus-GdUw1owQqWE-unsplash.jpg';
+import { SiReact, SiTypescript } from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 
-const placeholderLogos = [projectImage, projectImage, projectImage];
+const techIcons = [
+    <FaAws color='#FF9900' size={60} />,
+    <SiReact color='#61DAFB' size={60} />,
+    <SiTypescript color='#3178C6' size={60} />,
+];
 
 const projectData = [
-    {name: 'Project 1', logos: placeholderLogos},
-    {name: 'Project 2', logos: placeholderLogos},
-    {name: 'Project 3', logos: placeholderLogos},
-    {name: 'Project 4', logos: placeholderLogos},
-    {name: 'Project 5', logos: placeholderLogos}
+    {name: 'E-Invoicing Project', logos: techIcons},
+    {name: 'Project 2', logos: techIcons},
+    {name: 'Project 3', logos: techIcons},
 ]
 
 export default function ProjectNavigation({ projects, selected, setSelected }) {
@@ -18,15 +21,15 @@ export default function ProjectNavigation({ projects, selected, setSelected }) {
             <div className='project-navigation'>
                 {projects.map((project, index) => (
                     <button key={index} onClick={() => setSelected(index)} className={selected === index ? 'active' : ''}>
-                        Project {index + 1}
+                        {projectData[index].name}
                     </button>
                 ))}
             </div>
 
             {selected !== null && (
                 <div className='project-logos'>
-                    {projectData[selected].logos.map((logo, i) => (
-                        <img src={logo} alt={`logo`} key={i} style={{ width: 60, margin: 10, borderRadius: 13 }} />
+                    {projectData[selected].logos.map((icon, i) => (
+                        <span className='project-logo' key={i}>{icon}</span>
                     ))}
                 </div>
             )}
