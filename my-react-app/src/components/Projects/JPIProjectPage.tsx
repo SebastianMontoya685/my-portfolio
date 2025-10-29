@@ -70,7 +70,7 @@ export default function JPIProjectPage() {
                         textAlign: 'center',
                         fontWeight: '400'
                     }}>
-                        A comprehensive educational technology platform designed to revolutionize learning experiences through innovative digital solutions. JPI Education combines modern web technologies with educational best practices to create engaging, scalable learning environments.
+                        A backend system for JPI Education used to manage the company's digital operations, including customer management, lead capture, internal data management, and more integrations.
                     </p>
                     
                     {/* Technical Features */}
@@ -97,7 +97,7 @@ export default function JPIProjectPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Real-time collaborative learning platform
+                                    Academic Results Tracking Integration
                                 </p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
@@ -116,7 +116,7 @@ export default function JPIProjectPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Advanced student progress tracking
+                                    Airwallex Financial Integration With Slack
                                 </p>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ export default function JPIProjectPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Scalable cloud-based infrastructure
+                                    Complex Event-Driven Lead Capture Systems
                                 </p>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
@@ -156,7 +156,7 @@ export default function JPIProjectPage() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    Interactive content management system
+                                    Google Drive Financial File Management Integration
                                 </p>
                             </div>
                         </div>
