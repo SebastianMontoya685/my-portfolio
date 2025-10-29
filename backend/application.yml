@@ -1,2 +1,8 @@
 server:
   port: 8080
+
+app:
+  allowedOrigins: ${ALLOWED_ORIGINS:*}
+
+  lambda:
+    functionUrl: https://sy6sba3jqufb3g3cbfr4bcfeau0pyjkb.lambda-url.ap-southeast-2.on.aws/

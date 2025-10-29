@@ -55,7 +55,12 @@
 .header-title {
     font: roboto sans-serif monospace;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 6rem;
+}
+
+.header-left p {
+    font: roboto sans-serif monospace;
+    font-size: 1.5rem;
 }
 
 .header-button {

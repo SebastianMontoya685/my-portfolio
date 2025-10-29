@@ -11,6 +11,17 @@
     margin-left: 5vw;
 }
 
-.navigation-bar-right {
+.navigation-bar-right > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     margin-right: 5vw;
+}
+
+.navigation-bar-right-buttons button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    gap: 2rem;
 }

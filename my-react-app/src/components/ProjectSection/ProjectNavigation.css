@@ -19,3 +19,12 @@
     transform: translateY(-2px) scale(1.02);
     box-shadow: 1px 1px 2px 2.5px rgba(0, 0, 0, 0.1);
 }   
+
+.project-logos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    border-radius: 13px;
+    /* overflow: hidden; */
+}

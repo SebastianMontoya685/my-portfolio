@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+app:
+  allowedOrigins: ${ALLOWED_ORIGINS:*}
+  dynamodb:
+    region: ap-southeast-2
+    tableName: Customer_Information
+
+  lambda:
+    functionUrl: https://tw7ykhhu3c.execute-api.ap-southeast-2.amazonaws.com/JPI
