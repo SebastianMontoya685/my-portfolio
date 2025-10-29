@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer.tsx';
 import NavigationBar from './components/navigation/NavigationBar.tsx';
 import WorkExperience from './components/WorkExperience/WorkExperience.tsx';
 import JPIPage from './components/JPI Page/JPIPage.tsx';
+import ProjectsPage from './components/Projects/ProjectsPage.tsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import ScrollSection from './components/WorkExperience2/ScrollSection';
 function App() {
@@ -19,6 +20,13 @@ function App() {
             <Header />
             <ProjectSection />
             <WorkExperience />
+            <Footer />
+          </>
+          } />
+          <Route path="/projects" element={
+            <>
+            <NavigationBar />
+            <ProjectsPage />
             <Footer />
           </>
           } />

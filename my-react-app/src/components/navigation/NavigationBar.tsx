@@ -29,7 +29,7 @@ export default function NavigationBar() {
                 <div className='navigation-bar-right-buttons'>
                     <button>Contact</button>
                     <button onClick={() => navigate('/')}>Home</button>
-                    <button>Projects</button>
+                    <button onClick={() => navigate('/projects')}>Projects</button>
                     <button onClick={async () => {
                         navigate('/jpi');
                         await invokeLambda();

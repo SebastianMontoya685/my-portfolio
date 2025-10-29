@@ -1,0 +1,28 @@
+.footer-links {
+    display: flex;
+    flex-direction: column; /* stack like hero right */
+    align-items: flex-start;
+    justify-content: space-evenly; /* spread to fill vertical space */
+    gap: 14px;
+    height: 100%;
+}
+
+.footer-link,
+.footer-link-btn {
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    font: roboto sans-serif monospace;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link-btn:hover {
+    color: #bbb;
+}
+

@@ -6,8 +6,8 @@ import Links from './Links.tsx';
 export default function Footer() {
     return (
         <div className='footer' id='footer'>
-            <Socials />
             <Links />
+            <Socials />
         </div>
     );
 }
