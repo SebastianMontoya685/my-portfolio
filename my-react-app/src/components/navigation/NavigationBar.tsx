@@ -31,7 +31,7 @@ export default function NavigationBar() {
                     <button onClick={() => navigate('/')}>Home</button>
                     <button onClick={() => navigate('/projects')}>Projects</button>
                     <button onClick={async () => {
-                        navigate('/jpi');
+                        navigate('/jpi-project');
                         await invokeLambda();
                     }}>JPI</button>
                     <button>Work Experience</button>
