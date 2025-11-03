@@ -2,7 +2,7 @@ import React from 'react';
 import './NavigationBar.css';
 import { useNavigate } from 'react-router-dom';
 
-const backendURL = "http://localhost:8080";
+const backendURL = process.env.REACT_APP_API_URL || "http://localhost:8080";
 
 async function invokeLambda() {
     const response = await fetch(`${backendURL}/api/lambda/invoke`, {

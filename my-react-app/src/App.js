@@ -13,6 +13,8 @@ import JPIProjectPage from './components/Projects/JPIProjectPage';
 import ProjectsGrid from './components/Projects/ProjectsGrid';
 import CloudProjectPage from './components/Projects/CloudProjectPage';
 import ContactPage from './components/Contact/ContactPage';
+import TPRAPage from './components/JPI Page/TPRAPage';
+import UNSWPage from './components/JPI Page/UNSWPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import ScrollSection from './components/WorkExperience2/ScrollSection';
 function App() {
@@ -69,6 +71,20 @@ function App() {
             <>
             <NavigationBar />
             <ContactPage />
+            <Footer />
+          </>
+          } />
+          <Route path="/tpra" element={
+            <>
+            <NavigationBar />
+            <TPRAPage />
+            <Footer />
+          </>
+          } />
+          <Route path="/unsw" element={
+            <>
+            <NavigationBar />
+            <UNSWPage />
             <Footer />
           </>
           } />
