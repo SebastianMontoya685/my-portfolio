@@ -1,11 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import ProjectNavigation from './ProjectNavigation';
-import ProjectDisplay from './ProjectDisplay';
-import ProjectSlideshow from './ProjectSlideshow';
+import ProjectCategorySection from './ProjectCategorySection';
+import { SiReact, SiTypescript, SiSupabase, SiJavascript } from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 import './ProjectSection.css';
-const projectImage = '/placeholder-project.jpg';
 
 // E-invoicing project images
 const eInvoicingImages = [
@@ -25,50 +22,70 @@ const jpiEducationImages = [
     '/jpiprojectoffice.webp'
 ];
 
-const projectImages = [
-    projectImage,
-    projectImage,
-    projectImage,
-];
+const projectImage = '/placeholder-project.jpg';
 
 export default function ProjectSection() {
-    const [selected, setSelected] = useState(0);
-    const navigate = useNavigate();
-    
-    const handleProjectClick = () => {
-        if (selected === 2) {
-            // Navigate to JPI project page for JPI Education
-            navigate('/jpi-project');
-        } else {
-            // Navigate to general projects page for other projects
-            navigate('/projects');
-        }
-    };
-    
     return (
         <div className='project-section' id='projects'>
-            {/* <h1 className='project-section-title'>Projects.</h1> */}
-            <ProjectNavigation projects={projectImages} selected={selected} setSelected={setSelected}/>
-            {selected === 0 ? (
-                <div className='project-display'>
-                    <ProjectSlideshow 
-                        images={eInvoicingImages} 
-                        autoAdvanceInterval={3000} 
-                        onImageClick={handleProjectClick}
-                    />
-                </div>
-            ) : selected === 2 ? (
-                <div className='project-display'>
-                    <ProjectSlideshow 
-                        images={jpiEducationImages} 
-                        autoAdvanceInterval={4000} 
-                        onImageClick={handleProjectClick}
-                        objectFit={['contain', 'cover']}
-                    />
-                </div>
-            ) : (
-                <ProjectDisplay image={projectImages[selected]} />
-            )}
+            {/* BACKEND Section - JPI Project */}
+            <ProjectCategorySection
+                categoryText="BACKEND"
+                projects={[
+                    {
+                        name: 'JPI Education',
+                        type: 'slideshow',
+                        images: jpiEducationImages,
+                        navigateTo: '/jpi-project',
+                        objectFit: ['contain', 'cover'],
+                        skillIcons: [
+                            <SiReact color='#61DAFB' size={60} />,
+                            <SiSupabase color='#3ECF8E' size={60} />,
+                            <SiTypescript color='#3178C6' size={60} />,
+                        ]
+                    }
+                ]}
+            />
+            
+            {/* CLOUD Section - E-Invoicing, Placeholder, and TPRA */}
+            <ProjectCategorySection
+                categoryText="CLOUD"
+                showNavigation={true}
+                projects={[
+                    {
+                        name: 'E-Invoicing Project',
+                        type: 'slideshow',
+                        images: eInvoicingImages,
+                        navigateTo: '/projects',
+                        skillIcons: [
+                            <SiSupabase color='#3ECF8E' size={60} />,
+                            <SiReact color='#61DAFB' size={60} />,
+                            <SiJavascript color='#F7DF1E' size={60} />,
+                        ]
+                    },
+                    {
+                        name: 'JPI Global',
+                        type: 'single',
+                        image: projectImage,
+                        navigateTo: '/projects',
+                        skillIcons: [
+                            <FaAws color='#FF9900' size={60} />,
+                            <SiReact color='#61DAFB' size={60} />,
+                            <SiTypescript color='#3178C6' size={60} />,
+                        ]
+                    },
+                    {
+                        name: 'TPRA',
+                        type: 'single',
+                        image: projectImage,
+                        navigateTo: '/projects',
+                        skillIcons: [
+                            <FaAws color='#FF9900' size={60} />,
+                            <SiReact color='#61DAFB' size={60} />,
+                            <SiTypescript color='#3178C6' size={60} />,
+                        ]
+                    }
+                ]}
+            />
         </div>
     );
 }

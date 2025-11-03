@@ -1,10 +1,10 @@
 .footer-links {
     display: flex;
-    flex-direction: column; /* stack like hero right */
-    align-items: flex-start;
-    justify-content: space-evenly; /* spread to fill vertical space */
-    gap: 14px;
-    height: 100%;
+    flex-direction: row; /* horizontal layout */
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* spread links horizontally */
+    flex-wrap: wrap; /* allow wrapping if needed on small screens */
 }
 
 .footer-link,

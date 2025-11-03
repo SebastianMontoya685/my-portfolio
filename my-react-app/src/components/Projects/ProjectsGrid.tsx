@@ -5,6 +5,7 @@ import './ProjectsGrid.css';
 // Reuse the same hero/dashboard images already used in ProjectSection
 const eInvoicingThumb = '/e-invoicing-homedark.jpg';
 const jpiThumb = '/JPIeducationlogo.webp';
+const cloudProjectThumb = '/placeholder-project.jpg';
 
 type ProjectCard = {
     title: string;
@@ -25,6 +26,24 @@ const cards: ProjectCard[] = [
         subtitle: 'Tech Ops foundations and automation',
         image: jpiThumb,
         to: '/jpi-project'
+    },
+    {
+        title: 'JPI Global',
+        subtitle: 'Cloud infrastructure and automation',
+        image: cloudProjectThumb,
+        to: '/projects/cloud-project'
+    },
+    {
+        title: 'TPRA',
+        subtitle: 'Cloud-based project management',
+        image: cloudProjectThumb,
+        to: '/projects/cloud-project'
+    },
+    {
+        title: 'Cloud Project',
+        subtitle: 'Coming soon - Work in progress',
+        image: cloudProjectThumb,
+        to: '/projects/cloud-project'
     }
 ];
 

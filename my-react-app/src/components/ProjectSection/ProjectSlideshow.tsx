@@ -61,10 +61,22 @@ export default function ProjectSlideshow({ images, autoAdvanceInterval = 3000, o
                 
                 {images.length > 1 && (
                     <>
-                        <button className="slideshow-nav prev" onClick={goToPrevious}>
+                        <button 
+                            className="slideshow-nav prev" 
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                goToPrevious();
+                            }}
+                        >
                             &#8249;
                         </button>
-                        <button className="slideshow-nav next" onClick={goToNext}>
+                        <button 
+                            className="slideshow-nav next" 
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                goToNext();
+                            }}
+                        >
                             &#8250;
                         </button>
                         
@@ -73,7 +85,10 @@ export default function ProjectSlideshow({ images, autoAdvanceInterval = 3000, o
                                 <button
                                     key={index}
                                     className={`indicator ${index === currentIndex ? 'active' : ''}`}
-                                    onClick={() => goToSlide(index)}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        goToSlide(index);
+                                    }}
                                 />
                             ))}
                         </div>
