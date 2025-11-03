@@ -1,35 +1,25 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
-// import './JPIPage.css';
 import Folder from '../ProjectSection/Folder';
-import ProjectSlideshow from '../ProjectSection/ProjectSlideshow';
 
-// --- Monthly Timeline Data ---
 const MONTHS = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'
 ];
-const TIMELINE = MONTHS.map((month, i) => ({
+const TIMELINE = MONTHS.map((month) => ({
   month,
-  highlight: `Highlight for ${month} (placeholder)`
+  highlight: `Highlight for ${month} (TPRA placeholder)`
 }));
 
-// --- Placeholder Project Data ---
 const PROJECTS = [
   {
-    name: 'JPI Global',
-    cover: '/e-invoicingdashboard2.jpg', // use the cloud section image
-    image: '/e-invoicingdashboard2.jpg',
-    description: 'JPI Global: Placeholder description of the global/cloud project.'
-  },
-  {
-    name: 'JPI Project',
-    cover: '/jpiprojectoffice.webp', // office/backend section image
-    image: '/jpiprojectoffice.webp',
-    description: 'JPI Project: Placeholder description of the backend project.'
+    name: 'TPRA Placeholder Project',
+    cover: '/placeholder-project.jpg',
+    image: '/placeholder-project.jpg',
+    description: 'TPRA Project: Placeholder description.'
   }
 ];
 
-function useDebouncedValue<T>(value: T, delay: number) {
+function useDebouncedValue(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value);
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedValue(value), delay);
@@ -38,13 +28,12 @@ function useDebouncedValue<T>(value: T, delay: number) {
   return debouncedValue;
 }
 
-export default function JPIPage() {
-  const [modal, setModal] = useState<{ projectIdx: number } | null>(null); // modal: {projectIdx: number}
+export default function TPRAPage() {
+  const [modal, setModal] = useState(null);
   const [highlightedIdx, setHighlightedIdx] = useState(0);
-  const monthRefs = useRef<(HTMLDivElement | null)[]>([]);
-  // for a smoother/faded animation, track the "raw" candidate index and debounce the committed highlight
+  const monthRefs = useRef([]);
   const [candidateIdx, setCandidateIdx] = useState(0);
-  const debouncedHighlightedIdx = useDebouncedValue(candidateIdx, 60); // 60ms debounce for improved responsiveness
+  const debouncedHighlightedIdx = useDebouncedValue(candidateIdx, 60);
   const timelineWrapperRef = useRef(null);
   const [barCoords, setBarCoords] = useState({ top: null, height: null });
 
@@ -53,7 +42,7 @@ export default function JPIPage() {
   }, [debouncedHighlightedIdx]);
 
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
+    const observers = [];
     monthRefs.current.forEach((el, idx) => {
       if (!el) return;
       const observer = new window.IntersectionObserver(
@@ -73,37 +62,32 @@ export default function JPIPage() {
     return () => observers.forEach(obs => obs.disconnect());
   }, []);
 
-  // Measure the bar position after render
   useLayoutEffect(() => {
-    if (!timelineWrapperRef.current || !monthRefs.current[0] || !monthRefs.current[MONTHS.length-1]) {
+    if (!timelineWrapperRef.current || !monthRefs.current[0] || !monthRefs.current[MONTHS.length - 1]) {
       setBarCoords({ top: null, height: null });
       return;
     }
     const wrapperRect = timelineWrapperRef.current.getBoundingClientRect();
     const firstDotEl = monthRefs.current[0].querySelector('div > div') as HTMLElement;
-    const lastDotEl = monthRefs.current[MONTHS.length-1].querySelector('div > div') as HTMLElement;
+    const lastDotEl = monthRefs.current[MONTHS.length - 1].querySelector('div > div') as HTMLElement;
     if (!firstDotEl || !lastDotEl) {
       setBarCoords({ top: null, height: null });
       return;
     }
-    const firstDotCenter = firstDotEl.getBoundingClientRect().top + firstDotEl.offsetHeight/2 - wrapperRect.top;
-    const lastDotCenter = lastDotEl.getBoundingClientRect().top + lastDotEl.offsetHeight/2 - wrapperRect.top;
-    // Only set if values actually change (to prevent render loop)
+    const firstDotCenter = firstDotEl.getBoundingClientRect().top + firstDotEl.offsetHeight / 2 - wrapperRect.top;
+    const lastDotCenter = lastDotEl.getBoundingClientRect().top + lastDotEl.offsetHeight / 2 - wrapperRect.top;
     if (barCoords.top !== firstDotCenter || barCoords.height !== lastDotCenter - firstDotCenter) {
       setBarCoords({ top: firstDotCenter, height: lastDotCenter - firstDotCenter });
     }
-    // Note: safe dependency array forces this to run only when monthRefs or wrapperRef may change
     // eslint-disable-next-line
-  }, [monthRefs.current[0], monthRefs.current[MONTHS.length-1], timelineWrapperRef.current]);
+  }, [monthRefs.current[0], monthRefs.current[MONTHS.length - 1], timelineWrapperRef.current]);
 
   return (
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '3rem 1rem 5rem 1rem' }}>
-      {/* Role Title & Description */}
-      <h1 style={{ fontWeight: 900, fontSize: '2.5rem', marginBottom: 8 }}>JPI — Tech Ops</h1>
+      <h1 style={{ fontWeight: 900, fontSize: '2.5rem', marginBottom: 8 }}>TPRA — Project</h1>
       <p style={{ fontSize: '1.15rem', color: '#222', marginBottom: 38 }}>
-        Foundational role: operations, automation, incident response, reliability.
+        Role summary goes here. (TPRA placeholder)
       </p>
-      {/* Timeline: wrapper with measured bar */}
       <section ref={timelineWrapperRef} style={{ position: 'relative', margin: '0 auto 56px', minHeight: 1800, maxWidth: 540, padding: '15px 0 80px 0' }}>
         <h2 style={{ fontSize: '1.35rem', fontWeight: 800, marginBottom: 24, textAlign: 'center', color: '#000' }}>Role Timeline Highlights</h2>
         {barCoords.top !== null && barCoords.height !== null && (
@@ -112,14 +96,11 @@ export default function JPIPage() {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', position: 'relative', zIndex: 2, height: '100%', gap: 64, marginLeft: 0 }}>
           {TIMELINE.map((point, i) => {
             const isActive = i === highlightedIdx;
-            // calculate fading opacity depending on distance from active
             const distance = Math.abs(i - highlightedIdx);
             let fadeOpacity = 1;
             if (distance === 1) fadeOpacity = 0.55;
             else if (distance === 2) fadeOpacity = 0.25;
             else if (distance > 2) fadeOpacity = 0.1;
-            // further fade for lower items (optionally apply to above as well)
-            // fade-out only for below? then: if (i > highlightedIdx) fadeOpacity = ...
             return (
               <div
                 ref={el => { monthRefs.current[i] = el; }}
@@ -172,11 +153,9 @@ export default function JPIPage() {
             );
           })}
         </div>
-        {/* For a high-end visual, you might overlay a vertical gradient white-to-transparent mask here at the bottom/end */}
       </section>
-      {/* Folder: Only 1 image per project; modal z-index very high! */}
       <section style={{ margin: '70px 0', minHeight: 350 }}>
-        <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: 22, color: '#000' }}>JPI Projects</h2>
+        <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: 22, color: '#000' }}>TPRA Projects</h2>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Folder
             size={2.5}
@@ -196,7 +175,7 @@ export default function JPIPage() {
       </section>
       {modal && (
         <div style={{ position: 'fixed', zIndex: 200, top: 0, left: 0, width: '100vw', height: '100vh', background: '#0009', display: 'flex', alignItems: 'center', justifyContent: 'center', overflowY: 'auto' }}>
-          <div style={{ background: '#fff', borderRadius: 14, padding: '2rem', maxWidth: 620, width: '90vw', margin: '50px 0', boxShadow: '0 8px 40px #0004', position: 'relative', zIndex:210 }}>
+          <div style={{ background: '#fff', borderRadius: 14, padding: '2rem', maxWidth: 620, width: '90vw', margin: '50px 0', boxShadow: '0 8px 40px #0004', position: 'relative', zIndex: 210 }}>
             <div style={{ marginBottom: 18, fontSize: '1.1rem', color: '#111', minHeight: 50, textAlign: 'center' }}>
               {PROJECTS[modal.projectIdx].description}
             </div>
