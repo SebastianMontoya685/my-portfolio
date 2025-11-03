@@ -61,7 +61,7 @@ function App() {
           <Route path="/jpi-project" element={
             <>
             <NavigationBar />
-            <JPIProjectPage />
+            <JPIPage />
             <Footer />
           </>
           } />

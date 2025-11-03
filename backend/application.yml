@@ -10,14 +10,14 @@ app:
   # Email configuration
   email:
     # Your email address to receive contact form submissions
-    to: ${CONTACT_EMAIL:your-email@example.com}
+    to: ${CONTACT_EMAIL:juanmontoyas2003@gmail.com}
     
 spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME:}
-    password: ${MAIL_PASSWORD:}
+    username: ${MAIL_USERNAME:juanmontoyas2003@gmail.com}
+    password: ${MAIL_PASSWORD:mnut iytt svwy wzjh}
     properties:
       mail:
         smtp:
