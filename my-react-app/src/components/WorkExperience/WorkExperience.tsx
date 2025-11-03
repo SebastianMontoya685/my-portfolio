@@ -11,7 +11,7 @@ export default function WorkExperience() {
     const [activeIndex, setActiveIndex] = useState(null);
 
     return (
-        <div className='work-experience'>
+        <div className='work-experience' id='work-experience'>
             <div className='work-experience-title'>Work Experience.</div>
             <div className='work-experience-container'>
                 <div className='work-experience-right' tabIndex={0} style={{ outline: 'none' }}>

@@ -1,7 +1,7 @@
 import React from 'react';
 // import './JPIPage.css';
-import NavigationBar from '../navigation/NavigationBar.tsx';
-import Footer from '../Footer/Footer.tsx';
+import NavigationBar from '../navigation/NavigationBar';
+import Footer from '../Footer/Footer';
 
 export default function JPIPage() {
     return (
