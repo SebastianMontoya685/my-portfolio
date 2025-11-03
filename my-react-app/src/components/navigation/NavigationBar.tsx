@@ -27,14 +27,15 @@ export default function NavigationBar() {
             </div>
             <div className='navigation-bar-right'>
                 <div className='navigation-bar-right-buttons'>
-                    <button>Contact</button>
                     <button onClick={() => navigate('/')}>Home</button>
-                    <button onClick={() => navigate('/projects')}>Projects</button>
+                    <button onClick={() => navigate('/contact')}>Contact</button>
                     <button onClick={async () => {
                         navigate('/jpi-project');
                         await invokeLambda();
                     }}>JPI</button>
-                    <button>Work Experience</button>
+                    <button onClick={() => navigate('/tpra')}>TPRA</button>
+                    <button onClick={() => navigate('/unsw')}>UNSW</button>
+                    <button onClick={() => navigate('/projects')}>All Projects</button>
                 </div>
             </div>
         </div>

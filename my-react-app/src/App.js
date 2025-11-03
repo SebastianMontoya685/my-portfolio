@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Home/Header';
+import AboutMe from './components/Home/AboutMe';
+import RotatingText from './components/Home/RotatingText';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import Footer from './components/Footer/Footer';
 import NavigationBar from './components/navigation/NavigationBar';
@@ -9,6 +11,8 @@ import JPIPage from './components/JPI Page/JPIPage';
 import ProjectsPage from './components/Projects/ProjectsPage';
 import JPIProjectPage from './components/Projects/JPIProjectPage';
 import ProjectsGrid from './components/Projects/ProjectsGrid';
+import CloudProjectPage from './components/Projects/CloudProjectPage';
+import ContactPage from './components/Contact/ContactPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import ScrollSection from './components/WorkExperience2/ScrollSection';
 function App() {
@@ -20,6 +24,7 @@ function App() {
             <>
             <NavigationBar />
             <Header />
+            <AboutMe />
             <ProjectSection />
             <WorkExperience />
             <Footer />
@@ -39,6 +44,13 @@ function App() {
             <Footer />
           </>
           } />
+          <Route path="/projects/cloud-project" element={
+            <>
+            <NavigationBar />
+            <CloudProjectPage />
+            <Footer />
+          </>
+          } />
           <Route path="/jpi" element={
             <>
             <NavigationBar />
@@ -50,6 +62,13 @@ function App() {
             <>
             <NavigationBar />
             <JPIProjectPage />
+            <Footer />
+          </>
+          } />
+          <Route path="/contact" element={
+            <>
+            <NavigationBar />
+            <ContactPage />
             <Footer />
           </>
           } />

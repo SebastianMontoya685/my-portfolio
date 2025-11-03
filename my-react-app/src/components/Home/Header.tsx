@@ -1,16 +1,15 @@
 import React from 'react';
 import './Header.css';
 import Dock from './Dock';
-import { FiHome, FiGrid, FiBriefcase, FiMail } from 'react-icons/fi';    
+import { FiHome, FiGrid, FiBriefcase, FiShare2 } from 'react-icons/fi';    
 export default function Header() {
     return (
         <div className='header-container' id='header'>
             <div className='header'>
                 {/* <div className='header-left-container'> */}
                 <div className='header-left'>
-                    <h1 className='header-title'>Sebastian Montoya.</h1>
-                    <p>Backend, Frontend, and AI Developer</p>
-                    <button className='header-button'>See Projects</button>
+                    <h1 className='header-title'>Bringing <span className="underlined-text">Cloud & Backend</span> Skills<span className="underlined-text"></span> To Your Enterprise</h1>
+                    <button className='header-button'>See More</button>
                 </div>
                 {/* </div> */}
                 {/* Home-only floating dock */}
@@ -32,8 +31,8 @@ export default function Header() {
                             onClick: () => document.getElementById('work-experience')?.scrollIntoView({ behavior: 'smooth' })
                         },
                         {
-                            icon: <FiMail size={24} />,
-                            label: 'Contact',
+                            icon: <FiShare2 size={24} />,
+                            label: 'Socials',
                             onClick: () => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })
                         }
                     ]}

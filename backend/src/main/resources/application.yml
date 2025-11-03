@@ -9,3 +9,21 @@ app:
 
   lambda:
     functionUrl: https://tw7ykhhu3c.execute-api.ap-southeast-2.amazonaws.com/JPI
+
+  # Email configuration
+  email:
+    # Your email address to receive contact form submissions
+    to: ${CONTACT_EMAIL:juanmontoyas2003@gmail.com}
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${GMAIL_USERNAME:juanmontoyas2003@gmail.com}
+    password: ${GMAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

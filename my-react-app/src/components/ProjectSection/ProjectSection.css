@@ -3,11 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.project-section-title {
-    font: roboto sans-serif monospace;
-    font-weight: 900;
-    font-size: 6rem;
+    width: 100vw;
+    padding: 4rem 0;
 }

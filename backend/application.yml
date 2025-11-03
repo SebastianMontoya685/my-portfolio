@@ -6,3 +6,21 @@ app:
 
   lambda:
     functionUrl: https://sy6sba3jqufb3g3cbfr4bcfeau0pyjkb.lambda-url.ap-southeast-2.on.aws/
+
+  # Email configuration
+  email:
+    # Your email address to receive contact form submissions
+    to: ${CONTACT_EMAIL:your-email@example.com}
+    
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
