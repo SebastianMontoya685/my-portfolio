@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Home/Header.tsx';
-import ProjectSection from './components/ProjectSection/ProjectSection.tsx';
-import Footer from './components/Footer/Footer.tsx';
-import NavigationBar from './components/navigation/NavigationBar.tsx';
-import WorkExperience from './components/WorkExperience/WorkExperience.tsx';
-import JPIPage from './components/JPI Page/JPIPage.tsx';
-import ProjectsPage from './components/Projects/ProjectsPage.tsx';
-import JPIProjectPage from './components/Projects/JPIProjectPage.tsx';
+import Header from './components/Home/Header';
+import ProjectSection from './components/ProjectSection/ProjectSection';
+import Footer from './components/Footer/Footer';
+import NavigationBar from './components/navigation/NavigationBar';
+import WorkExperience from './components/WorkExperience/WorkExperience';
+import JPIPage from './components/JPI Page/JPIPage';
+import ProjectsPage from './components/Projects/ProjectsPage';
+import JPIProjectPage from './components/Projects/JPIProjectPage';
+import ProjectsGrid from './components/Projects/ProjectsGrid';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import ScrollSection from './components/WorkExperience2/ScrollSection';
 function App() {
@@ -25,6 +26,13 @@ function App() {
           </>
           } />
           <Route path="/projects" element={
+            <>
+            <NavigationBar />
+            <ProjectsGrid />
+            <Footer />
+          </>
+          } />
+          <Route path="/projects/e-invoicing" element={
             <>
             <NavigationBar />
             <ProjectsPage />

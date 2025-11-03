@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ProjectNavigation from './ProjectNavigation.tsx';
-import ProjectDisplay from './ProjectDisplay.tsx';
-import ProjectSlideshow from './ProjectSlideshow.tsx';
+import ProjectNavigation from './ProjectNavigation';
+import ProjectDisplay from './ProjectDisplay';
+import ProjectSlideshow from './ProjectSlideshow';
 import './ProjectSection.css';
 const projectImage = '/placeholder-project.jpg';
 

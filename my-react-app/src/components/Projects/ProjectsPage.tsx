@@ -1,5 +1,5 @@
 import React from 'react';
-import Folder from '../ProjectSection/Folder.tsx';
+import Folder from '../ProjectSection/Folder';
 import './ProjectsPage.css';
 
 export default function ProjectsPage() {

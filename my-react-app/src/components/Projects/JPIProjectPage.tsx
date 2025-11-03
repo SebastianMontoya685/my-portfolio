@@ -1,7 +1,7 @@
 import React from 'react';
 import './JPIProjectPage.css';
 import './ProjectsPage.css';
-import Folder from '../ProjectSection/Folder.tsx';
+import Folder from '../ProjectSection/Folder';
 import cover from '../../ryan-klaus-GdUw1owQqWE-unsplash.jpg';
 
 export default function JPIProjectPage() {
