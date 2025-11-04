@@ -9,7 +9,7 @@ import {
   type SpringOptions,
   AnimatePresence
 } from 'motion/react';
-import React, { Children, cloneElement, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Children, cloneElement, useEffect, useRef, useState } from 'react';
 
 import './Dock.css';
 
