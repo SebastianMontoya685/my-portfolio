@@ -1,15 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Home/Header';
 import AboutMe from './components/Home/AboutMe';
-import RotatingText from './components/Home/RotatingText';
+// import RotatingText from './components/Home/RotatingText';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import Footer from './components/Footer/Footer';
 import NavigationBar from './components/navigation/NavigationBar';
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import JPIPage from './components/JPI Page/JPIPage';
 import ProjectsPage from './components/Projects/ProjectsPage';
-import JPIProjectPage from './components/Projects/JPIProjectPage';
+// import JPIProjectPage from './components/Projects/JPIProjectPage';
 import ProjectsGrid from './components/Projects/ProjectsGrid';
 import CloudProjectPage from './components/Projects/CloudProjectPage';
 import ContactPage from './components/Contact/ContactPage';
