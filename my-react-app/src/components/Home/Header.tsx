@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
-import Dock from './Dock';
-import { FiHome, FiGrid, FiBriefcase, FiShare2 } from 'react-icons/fi';    
+import Dock from './Dock';    
 export default function Header() {
     return (
         <div className='header-container' id='header'>
@@ -16,22 +15,22 @@ export default function Header() {
                 <Dock
                     items={[
                         {
-                            icon: <FiHome size={24} />,
+                            icon: '🏠',
                             label: 'Home',
                             onClick: () => document.getElementById('header')?.scrollIntoView({ behavior: 'smooth' })
                         },
                         {
-                            icon: <FiGrid size={24} />,
+                            icon: '🗂️',
                             label: 'Projects',
                             onClick: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
                         },
                         {
-                            icon: <FiBriefcase size={24} />,
+                            icon: '💼',
                             label: 'Work Experience',
                             onClick: () => document.getElementById('work-experience')?.scrollIntoView({ behavior: 'smooth' })
                         },
                         {
-                            icon: <FiShare2 size={24} />,
+                            icon: '🔗',
                             label: 'Socials',
                             onClick: () => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })
                         }

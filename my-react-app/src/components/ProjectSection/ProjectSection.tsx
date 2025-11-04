@@ -1,7 +1,5 @@
 import React from 'react';
 import ProjectCategorySection from './ProjectCategorySection';
-import { SiReact, SiTypescript, SiSupabase, SiJavascript } from 'react-icons/si';
-import { FaAws } from 'react-icons/fa';
 import './ProjectSection.css';
 
 // E-invoicing project images
@@ -38,9 +36,7 @@ export default function ProjectSection() {
                         navigateTo: '/jpi-project',
                         objectFit: ['contain', 'cover'],
                         skillIcons: [
-                            <SiReact color='#61DAFB' size={60} />,
-                            <SiSupabase color='#3ECF8E' size={60} />,
-                            <SiTypescript color='#3178C6' size={60} />,
+                            '⚛️', '🟩', '🔵'
                         ]
                     }
                 ]}
@@ -57,9 +53,7 @@ export default function ProjectSection() {
                         images: eInvoicingImages,
                         navigateTo: '/projects',
                         skillIcons: [
-                            <SiSupabase color='#3ECF8E' size={60} />,
-                            <SiReact color='#61DAFB' size={60} />,
-                            <SiJavascript color='#F7DF1E' size={60} />,
+                            '🟩', '⚛️', '💛'
                         ]
                     },
                     {
@@ -68,9 +62,7 @@ export default function ProjectSection() {
                         image: projectImage,
                         navigateTo: '/projects',
                         skillIcons: [
-                            <FaAws color='#FF9900' size={60} />,
-                            <SiReact color='#61DAFB' size={60} />,
-                            <SiTypescript color='#3178C6' size={60} />,
+                            '☁️', '⚛️', '🔵'
                         ]
                     },
                     {
@@ -79,9 +71,7 @@ export default function ProjectSection() {
                         image: projectImage,
                         navigateTo: '/projects',
                         skillIcons: [
-                            <FaAws color='#FF9900' size={60} />,
-                            <SiReact color='#61DAFB' size={60} />,
-                            <SiTypescript color='#3178C6' size={60} />,
+                            '☁️', '⚛️', '🔵'
                         ]
                     }
                 ]}
