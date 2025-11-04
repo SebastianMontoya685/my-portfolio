@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 import './Socials.css';
 
 export default function Socials() {
@@ -11,7 +10,7 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="social-item"
             >
-                <span className="icon-box"><FaInstagram /></span>
+                <span className="icon-box" role="img" aria-label="Instagram">📸</span>
                 <span>Instagram.</span>
             </a>
             <a 
@@ -20,7 +19,7 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="social-item"
             >
-                <span className="icon-box"><FaLinkedin /></span>
+                <span className="icon-box" role="img" aria-label="LinkedIn">🔗</span>
                 <span>LinkedIn.</span>
             </a>
             <a 
@@ -29,11 +28,11 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="social-item"
             >
-                <span className="icon-box"><FaGithub /></span>
+                <span className="icon-box" role="img" aria-label="GitHub">🐱</span>
                 <span>GitHub.</span>
             </a>
             <div className="social-item">
-                <span className="icon-box"><FaFacebook /></span>
+                <span className="icon-box" role="img" aria-label="Facebook">📘</span>
                 <span>Facebook.</span>
             </div>
         </div>

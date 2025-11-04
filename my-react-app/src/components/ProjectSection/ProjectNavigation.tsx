@@ -1,28 +1,14 @@
 import React from 'react';
 import './ProjectNavigation.css';
-import { SiReact, SiTypescript, SiSupabase, SiJavascript } from 'react-icons/si';
-import { FaAws } from 'react-icons/fa';
 
 // Project 1: E-Invoicing System - Supabase, React, JavaScript
-const project1Icons = [
-    <SiSupabase color='#3ECF8E' size={60} />,
-    <SiReact color='#61DAFB' size={60} />,
-    <SiJavascript color='#F7DF1E' size={60} />,
-];
+const project1Icons = [ '🟩', '⚛️', '💛' ];
 
 // Project 2: Cloud Management Platform - AWS, React, TypeScript
-const project2Icons = [
-    <FaAws color='#FF9900' size={60} />,
-    <SiReact color='#61DAFB' size={60} />,
-    <SiTypescript color='#3178C6' size={60} />,
-];
+const project2Icons = [ '☁️', '⚛️', '🔵' ];
 
 // Project 3: Data Analytics Suite - React, Supabase, TypeScript
-const project3Icons = [
-    <SiReact color='#61DAFB' size={60} />,
-    <SiSupabase color='#3ECF8E' size={60} />,
-    <SiTypescript color='#3178C6' size={60} />,
-];
+const project3Icons = [ '⚛️', '🟩', '🔵' ];
 
 const projectData = [
     {name: 'E-Invoicing Project', logos: project1Icons},
