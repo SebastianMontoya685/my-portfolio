@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 // import './JPIPage.css';
 import Folder from '../ProjectSection/Folder';
-import ProjectSlideshow from '../ProjectSection/ProjectSlideshow';
+// import ProjectSlideshow from '../ProjectSection/ProjectSlideshow';
 
 // --- Monthly Timeline Data ---
 const MONTHS = [
