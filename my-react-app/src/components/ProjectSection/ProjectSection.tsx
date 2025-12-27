@@ -24,13 +24,13 @@ const projects = [
     {
         name: 'JPI Education',
         type: 'single',
-        video: '/cloneTask_1.mp4',
+        video: '/real-recording.mp4',
         navigateTo: '/jpi-project'
     },
     {
         name: 'E-Invoicing Project',
         type: 'single',
-        video: '/cloneTask_1.mp4',
+        video: '/real-recording.mp4',
         navigateTo: '/projects'
     }
 ]
