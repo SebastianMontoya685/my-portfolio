@@ -12,6 +12,7 @@ type ProjectCategorySectionProps = {
         type: 'slideshow' | 'single';
         images?: string[];
         image?: string;
+        video?: string;
         navigateTo?: string;
         objectFit?: 'cover' | 'contain' | ('cover' | 'contain')[];
         skillIcons?: React.ReactNode[];
@@ -72,6 +73,7 @@ export default function ProjectCategorySection({ categoryText, projects, showNav
                     ) : (
                         <ProjectDisplay 
                             image={selectedProject.image || '/placeholder-project.jpg'}
+                            video={selectedProject.video}
                         />
                     )}
                 </div>

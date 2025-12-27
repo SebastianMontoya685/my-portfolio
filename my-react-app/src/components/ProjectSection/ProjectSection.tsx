@@ -20,62 +20,40 @@ const jpiEducationImages = [
     '/jpiprojectoffice.webp'
 ];
 
-const projectImage = '/placeholder-project.jpg';
+const projects = [
+    {
+        name: 'JPI Education',
+        type: 'single',
+        video: '/cloneTask_1.mp4',
+        navigateTo: '/jpi-project'
+    },
+    {
+        name: 'E-Invoicing Project',
+        type: 'single',
+        video: '/cloneTask_1.mp4',
+        navigateTo: '/projects'
+    }
+]
 
 export default function ProjectSection() {
     return (
         <div className='project-section' id='projects'>
             {/* BACKEND Section - JPI Project */}
-            <ProjectCategorySection
-                categoryText="BACKEND"
-                projects={[
-                    {
-                        name: 'JPI Education',
-                        type: 'slideshow',
-                        images: jpiEducationImages,
-                        navigateTo: '/jpi-project',
-                        objectFit: ['contain', 'cover'],
-                        skillIcons: [
-                            '⚛️', '🟩', '🔵'
-                        ]
-                    }
-                ]}
-            />
-            
-            {/* CLOUD Section - E-Invoicing, Placeholder, and TPRA */}
-            <ProjectCategorySection
-                categoryText="CLOUD"
-                showNavigation={true}
-                projects={[
-                    {
-                        name: 'E-Invoicing Project',
-                        type: 'slideshow',
-                        images: eInvoicingImages,
-                        navigateTo: '/projects',
-                        skillIcons: [
-                            '🟩', '⚛️', '💛'
-                        ]
-                    },
-                    {
-                        name: 'JPI Global',
-                        type: 'single',
-                        image: projectImage,
-                        navigateTo: '/projects',
-                        skillIcons: [
-                            '☁️', '⚛️', '🔵'
-                        ]
-                    },
-                    {
-                        name: 'TPRA',
-                        type: 'single',
-                        image: projectImage,
-                        navigateTo: '/projects',
-                        skillIcons: [
-                            '☁️', '⚛️', '🔵'
-                        ]
-                    }
-                ]}
-            />
+            <div className="project-grid-section">
+                <h1 className="project-grid-title">Projects</h1>
+                <div className="projects">
+                    {projects.map((project, idx) => (
+                        <div className="project-grid-item" key={idx}>
+                            <h2 className="project-grid-item-title">{project.name}</h2>
+                            <div className="project-video-wrapper">
+                                <video src={project.video} controls>
+                                    Sorry, your browser does not support embedded videos.
+                                </video>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
