@@ -1,7 +1,10 @@
 import React from 'react';
 import './JPISimplePage.css';
+import { useTheme } from '../../context/ThemeContext';
 
 export default function JPISimplePage() {
+    const { theme } = useTheme();
+    
     return (
         <div className="jpi-simple-page">
             <div className="jpi-simple-container">
@@ -14,7 +17,7 @@ export default function JPISimplePage() {
                 {/* Image Section */}
                 <div className="jpi-simple-media">
                     <img 
-                        src="/JPIeducationlogo.webp" 
+                        src={theme === 'light' ? '/JPIeducationlogo.webp' : '/JPI-non.webp'}
                         alt="JPI Education Logo"
                         className="jpi-simple-image"
                     />

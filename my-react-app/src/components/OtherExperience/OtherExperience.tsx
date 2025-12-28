@@ -5,20 +5,20 @@ import './OtherExperience.css';
 
 const experiences = [
   {
-    image: 'https://picsum.photos/seed/exp1/800/600',
-    text: 'Experience 1'
+    image: '/UNSW-logo.png',
+    text: 'UNSW'
   },
   {
-    image: 'https://picsum.photos/seed/exp2/800/600',
-    text: 'Experience 2'
+    image: '/terrible-ideas-hackathon.jpeg',
+    text: 'Hackathons'
   },
   {
-    image: 'https://picsum.photos/seed/exp3/800/600',
-    text: 'Experience 3'
+    image: '/Create-soc.jpg',
+    text: 'Create Society'
   },
   {
-    image: 'https://picsum.photos/seed/exp4/800/600',
-    text: 'Experience 4'
+    image: '/CSE-soc.jpg',
+    text: 'CSE Society'
   },
   {
     image: 'https://picsum.photos/seed/exp5/800/600',
@@ -31,6 +31,9 @@ const experiences = [
 ];
 
 export default function OtherExperience() {
+    const { theme } = useTheme();
+    const textColor = theme === 'dark' ? '#ffffff' : '#000000';
+    
     return (
         <div className='other-experience' id='other-experience'>
             <div className='other-experience-title'>Other Experience.</div>
@@ -38,7 +41,7 @@ export default function OtherExperience() {
                 <CircularGallery 
                     items={experiences}
                     bend={3} 
-                    textColor="#000000" 
+                    textColor={textColor} 
                     borderRadius={0.05} 
                     scrollEase={0.02}
                 />

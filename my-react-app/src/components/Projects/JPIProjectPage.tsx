@@ -3,13 +3,17 @@ import './JPIProjectPage.css';
 import './ProjectsPage.css';
 import Folder from '../ProjectSection/Folder';
 import cover from '../../ryan-klaus-GdUw1owQqWE-unsplash.jpg';
+import { useTheme } from '../../context/ThemeContext';
 
 export default function JPIProjectPage() {
+    const { theme } = useTheme();
     const [selectedImage, setSelectedImage] = React.useState<number | null>(null);
+    
+    const logoImage = theme === 'light' ? "/JPIeducationlogo.webp" : "/JPI-non.webp";
 
     const projectData = [
         {
-            image: "/JPIeducationlogo.webp",
+            image: logoImage,
             title: "JPI Education Brand Identity",
             description: "The official JPI Education logo showcasing the brand's commitment to educational excellence. The design represents innovation in learning and professional development with clean, modern typography and symbolic elements."
         },

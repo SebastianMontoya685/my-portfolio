@@ -64,7 +64,14 @@
     width: 100%;
     display: block;
     object-fit: contain;
+    background: white;
+    padding: 1rem;
+}
+
+/* Dark mode uses the dark logo variant with transparent bg */
+[data-theme="dark"] .jpi-simple-image {
     background: var(--bg-secondary);
+    padding: 1rem;
 }
 
 /* Description Section */

@@ -30,6 +30,8 @@
 .tilted-card-inner {
   position: relative;
   transform-style: preserve-3d;
+  background-color: var(--bg-primary, #ffffff);
+  border-radius: 15px;
 }
 
 .tilted-card-img {
@@ -37,6 +39,7 @@
   top: 0;
   left: 0;
   object-fit: cover;
+  object-position: center center;
   border-radius: 15px;
   will-change: transform;
   transform: translateZ(0);
