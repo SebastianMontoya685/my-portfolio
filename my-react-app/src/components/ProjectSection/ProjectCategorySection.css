@@ -22,25 +22,26 @@
 }
 
 .category-navigation button {
-    background-color: #fff;
-    border: 1.5px solid #111;
+    background-color: var(--bg-primary);
+    border: 1.5px solid var(--border-color);
     border-radius: 13px;
     padding: 0.85vh 0.85vw;
     font: roboto sans-serif monospace;
     transition: all 0.3s ease;
     cursor: pointer;
+    color: var(--text-primary);
 }
 
 .category-navigation button:hover {
-    background: #f9f9f9;
-    border-color: #bbb;
+    background: var(--hover-bg);
+    border-color: var(--border-medium);
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 1px 1px 2px 2.5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 2px 2.5px var(--shadow-color);
 }
 
 .category-navigation button.active {
-    background: #111;
-    color: #fff;
+    background: var(--text-primary);
+    color: var(--bg-primary);
 }
 
 .project-logos {

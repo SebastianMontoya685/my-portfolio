@@ -16,9 +16,11 @@ import ContactPage from './components/Contact/ContactPage';
 import TPRAPage from './components/JPI Page/TPRAPage';
 import UNSWPage from './components/JPI Page/UNSWPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 // import ScrollSection from './components/WorkExperience2/ScrollSection';
 function App() {
   return (
+    <ThemeProvider>
     <div className="App">
       <Router>
         <Routes>
@@ -92,6 +94,7 @@ function App() {
         </Routes>
       </Router>
     </div>
+    </ThemeProvider>
   );
 }
 

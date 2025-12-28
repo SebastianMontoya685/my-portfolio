@@ -23,12 +23,13 @@
     font-size: 3.5rem;
     margin: 0 0 1rem 0;
     text-align: center;
+    color: var(--text-primary);
 }
 
 .contact-subtitle {
     font: roboto sans-serif monospace;
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-muted);
     text-align: center;
     margin: 0 0 3rem 0;
     line-height: 1.6;
@@ -51,7 +52,7 @@
     font: roboto sans-serif monospace;
     font-weight: 600;
     font-size: 1rem;
-    color: #111;
+    color: var(--text-primary);
 }
 
 .form-group input,
@@ -59,10 +60,10 @@
     font: roboto sans-serif monospace;
     font-size: 1rem;
     padding: 0.85rem 1rem;
-    border: 1.5px solid #111;
+    border: 1.5px solid var(--border-color);
     border-radius: 13px;
-    background-color: #fff;
-    color: #111;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     transition: all 0.2s ease;
     box-sizing: border-box;
     width: 100%;
@@ -71,15 +72,15 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #bbb;
-    background: #fff;
+    border-color: var(--border-medium);
+    background: var(--bg-primary);
     transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #999;
+    color: var(--text-placeholder);
 }
 
 .form-group textarea {
@@ -92,19 +93,19 @@
     font: roboto sans-serif monospace;
     font-weight: 600;
     font-size: 1rem;
-    background-color: #fff;
-    border: 1.5px solid #111;
+    background-color: var(--bg-primary);
+    border: 1.5px solid var(--border-color);
     border-radius: 13px;
     padding: 0.85rem 2rem;
     cursor: pointer;
     transition: all 0.3s ease;
     align-self: center;
     margin-top: 1rem;
-    color: #111;
+    color: var(--text-primary);
 }
 
 .submit-button:hover {
-    background: #f9f9f9;
+    background: var(--hover-bg);
     border-color: #5227FF;
     transform: translateY(-2px);
     box-shadow: 1px 1px 2px 2.5px rgba(82, 39, 255, 0.1);

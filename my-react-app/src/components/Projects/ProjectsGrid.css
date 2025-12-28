@@ -10,6 +10,7 @@
     font-weight: 900;
     font-size: 2.5rem;
     margin: 0.5rem 0 1rem 0;
+    color: var(--text-primary);
 }
 
 /* Scope all grid styles to only apply within projects-grid-page to avoid affecting homepage */
@@ -24,8 +25,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    background: #fff;
-    border: 1.5px solid #111;
+    background: var(--bg-primary);
+    border: 1.5px solid var(--border-color);
     border-radius: 14px;
     cursor: pointer;
     text-align: left;
@@ -41,8 +42,8 @@
 
 .projects-grid-page .project-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    border-color: #bbb;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    border-color: var(--border-medium);
 }
 
 .projects-grid-page .project-card-image-wrap {
@@ -50,8 +51,8 @@
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 10px;
-    border: 1px solid #111;
-    background: #fafafa;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
     flex-shrink: 0;
 }
 
@@ -75,11 +76,12 @@
     font-weight: 800;
     font-size: 1.25rem;
     margin: 0;
+    color: var(--text-primary);
 }
 
 .projects-grid-page .project-card-text p {
     margin: 0;
-    color: #444;
+    color: var(--text-secondary);
     font: roboto sans-serif monospace;
     flex: 0 1 auto;
 }

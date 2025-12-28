@@ -26,6 +26,7 @@
     line-height: 1.2;
     margin-bottom: 3rem;
     text-align: center;
+    color: var(--text-primary);
 }
 
 .about-me-content {
@@ -39,7 +40,7 @@
     font: roboto sans-serif monospace;
     font-size: 1.25rem;
     line-height: 1.8;
-    color: #333;
+    color: var(--text-secondary);
     text-align: left;
 }
 
@@ -59,7 +60,7 @@
     font-size: 1rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #333;
+    color: var(--text-secondary);
     text-align: center;
     margin: 0;
 }
@@ -79,26 +80,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border: 2px solid #111;
+    border: 2px solid var(--border-color);
     border-radius: 16px;
     padding: 2.5rem 3rem;
     min-width: 300px;
     flex: 1;
     max-width: 450px;
-    background-color: #fff;
+    background-color: var(--bg-primary);
     transition: all 0.3s ease;
 }
 
 .stat-box:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px var(--shadow-color);
 }
 
 .stat-number {
     font: roboto sans-serif monospace;
     font-weight: 900;
     font-size: 3.5rem;
-    color: #111;
+    color: var(--text-primary);
     line-height: 1;
     margin-bottom: 0.5rem;
 }
@@ -107,7 +108,7 @@
     font: roboto sans-serif monospace;
     font-weight: 600;
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }

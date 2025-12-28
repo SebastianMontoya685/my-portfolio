@@ -12,9 +12,10 @@
     grid-template-columns: 36px auto; /* icon box + label */
     align-items: center;
     column-gap: 10px;
-    color: #333333;
+    color: var(--text-secondary);
     text-decoration: none; /* remove underline from links */
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .icon-box {
@@ -27,6 +28,7 @@
 .icon-box svg {
     width: 26px;
     height: 26px;
+    fill: currentColor;
 }
 
 .social-item span {
@@ -36,6 +38,6 @@
 }
 
 .social-item:hover {
-    color: #000000;
+    color: var(--text-primary);
 }
 

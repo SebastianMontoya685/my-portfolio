@@ -8,9 +8,10 @@
     box-sizing: border-box; /* ensure padding affects total width */
     position: sticky;
     top: 0;
-    background: #fff;
+    background: var(--bg-primary);
     z-index: 100;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-light);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .navigation-bar-left {
@@ -24,6 +25,7 @@
     font-size: 2rem; /* scaled down from hero (6rem) to fit navbar */
     line-height: 1;
     margin: 0;
+    color: var(--text-primary);
 }
 
 .navigation-bar-right > div {
@@ -35,18 +37,24 @@
 }
 
 .navigation-bar-right-buttons button {
-    background-color: #fff;
-    border: 1.5px solid #111;
+    background-color: var(--bg-primary);
+    border: 1.5px solid var(--border-color);
     border-radius: 13px;
     padding: 0.5rem 0.85rem;
     font: roboto sans-serif monospace;
     cursor: pointer;
     transition: all 0.2s ease;
+    color: var(--text-primary);
 }
 
 .navigation-bar-right-buttons button:hover {
-    background: #f9f9f9;
-    border-color: #bbb;
+    background: var(--hover-bg);
+    border-color: var(--border-medium);
     transform: translateY(-1px);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+.theme-toggle-btn {
+    font-size: 1.2rem !important;
+    padding: 0.4rem 0.6rem !important;
 }

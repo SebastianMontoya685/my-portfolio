@@ -19,11 +19,12 @@
     font-weight: 900;
     font-size: 3rem;
     margin: 0 0 0.25rem 0;
+    color: var(--text-primary);
 }
 
 .jpi-subtitle {
     font: roboto sans-serif monospace;
-    color: #222;
+    color: var(--text-secondary);
     margin: 0;
 }
 
@@ -31,9 +32,9 @@
     width: 100%;
     height: 260px;
     object-fit: cover;
-    border: 1px solid #111;
+    border: 1px solid var(--border-color);
     border-radius: 12px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 2px var(--shadow-color);
 }
 
 .jpi-section {
@@ -56,10 +57,11 @@
 
 .jpi-badge {
     padding: 0.35rem 0.6rem;
-    border: 1.5px solid #111;
+    border: 1.5px solid var(--border-color);
     border-radius: 999px;
     font: roboto sans-serif monospace;
-    background: #fff;
+    background: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 
