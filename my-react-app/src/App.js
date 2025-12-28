@@ -6,6 +6,7 @@ import ProjectSection from './components/ProjectSection/ProjectSection';
 import Footer from './components/Footer/Footer';
 import NavigationBar from './components/navigation/NavigationBar';
 import WorkExperience from './components/WorkExperience/WorkExperience';
+import OtherExperience from './components/OtherExperience/OtherExperience';
 import JPIPage from './components/JPI Page/JPIPage';
 import ProjectsPage from './components/Projects/ProjectsPage';
 // import JPIProjectPage from './components/Projects/JPIProjectPage';
@@ -25,9 +26,10 @@ function App() {
             <>
             <NavigationBar />
             <Header />
-            <AboutMe />
             <ProjectSection />
             <WorkExperience />
+            <OtherExperience />
+            <AboutMe />
             <Footer />
           </>
           } />

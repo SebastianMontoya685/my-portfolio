@@ -9,8 +9,6 @@ export default function Links() {
             <a href="#header" className="footer-link">Home.</a>
             <a href="#projects" className="footer-link">Projects.</a>
             <button className="footer-link-btn" onClick={() => navigate('/jpi')}>JPI.</button>
-            <a href="#work-experience" className="footer-link">Work Experience.</a>
-            <a href="#contact" className="footer-link">Contact.</a>
         </div>
     );
 }

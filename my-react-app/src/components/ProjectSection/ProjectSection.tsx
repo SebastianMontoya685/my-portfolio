@@ -30,6 +30,18 @@ const projects = [
     {
         name: 'E-Invoicing Project',
         type: 'single',
+        video: '/e-invoicing.mp4',
+        navigateTo: '/projects'
+    },
+    {
+        name: 'Airtable Clone',
+        type: 'single',
+        video: '/real-recording.mp4',
+        navigateTo: '/projects'
+    },
+    {
+        name: 'LinkedIn Comment Automation Startup',
+        type: 'single',
         video: '/real-recording.mp4',
         navigateTo: '/projects'
     }
@@ -40,7 +52,7 @@ export default function ProjectSection() {
         <div className='project-section' id='projects'>
             {/* BACKEND Section - JPI Project */}
             <div className="project-grid-section">
-                <h1 className="project-grid-title">Projects</h1>
+                <h1 className="project-grid-title">Projects.</h1>
                 <div className="projects">
                     {projects.map((project, idx) => (
                         <div className="project-grid-item" key={idx}>

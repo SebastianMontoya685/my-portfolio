@@ -10,7 +10,9 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="social-item"
             >
-                <span className="icon-box" role="img" aria-label="Instagram">📸</span>
+                <span className="icon-box" aria-label="Instagram">
+                    <img src="/instagram-logo.svg" alt="Instagram" width={26} height={26} />
+                </span>
                 <span>Instagram.</span>
             </a>
             <a 
@@ -19,7 +21,9 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="social-item"
             >
-                <span className="icon-box" role="img" aria-label="LinkedIn">🔗</span>
+                <span className="icon-box" aria-label="LinkedIn">
+                    <img src="/linkedin-logo.svg" alt="LinkedIn" width={26} height={26} />
+                </span>
                 <span>LinkedIn.</span>
             </a>
             <a 
@@ -28,13 +32,11 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="social-item"
             >
-                <span className="icon-box" role="img" aria-label="GitHub">🐱</span>
+                <span className="icon-box" aria-label="GitHub">
+                    <img src="/github-logo.svg" alt="GitHub" width={26} height={26} />
+                </span>
                 <span>GitHub.</span>
             </a>
-            <div className="social-item">
-                <span className="icon-box" role="img" aria-label="Facebook">📘</span>
-                <span>Facebook.</span>
-            </div>
         </div>
     );
 }

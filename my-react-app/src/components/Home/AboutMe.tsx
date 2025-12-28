@@ -5,17 +5,15 @@ export default function AboutMe() {
     return (
         <div className='about-me-container' id='about-me'>
             <div className='about-me'>
-                <h1 className='about-me-title'>About Me</h1>
+                <h1 className='about-me-title'>More About Me.</h1>
                 <div className='about-me-content'>
                     <p className='about-me-text'>
-                        I am a final year Computer Science student at the University of New South Wales, Sydney.
-                        I have had a year of experience across two enterprises companies, while balancing my studies.
-                        My experience at JPI Education gave me the opportunity to work on building the entire backend system for 
-                        the company and integrating many third party services to the system.
-                        My experience at The Princeton Review gave me the opportunirty to work on another backend system
-                        where I also had the chance to learn cloud basics such as AWS, Terraform, and Docker.
-                        With these experiences, I have gained a solid foundation, and I am now in the pursuit of landing
-                        a more corporate role in the industry, where I can scale my career in a longer-term role.
+                        I am a final year Computer Science student who is currently working as a Tech Ops Engineer at JPI Education.
+                        The highlight of my professional experience in the software industry so far has been working on a backend system
+                        for an educational company, where I got to own the entire software development process from design to deployment.
+                        I have also dabbled in many other technologies in my spare time and during my studies, such as AWS, Terraform, Docker,
+                        Full-Stack development, and AI. However, moving into the industry, I have a partiuclar interest in searching for roles with a mix of frontend, cloud, and 
+                        Web Security skills, since I strongly believe these are the skills of the future, but am open to other opportunities as well.
                     </p>
                 </div>
             </div>

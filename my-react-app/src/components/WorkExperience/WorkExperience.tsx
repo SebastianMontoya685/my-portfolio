@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import './WorkExperience.css';
 
 const workplaces = [
-    "JPI",
-    "TPRA Australia",
-    "Katana AI"
+    {name: 'JPI', description: 'Tech Ops Engineer', image: '/JPIeducationlogo.webp'},
 ];
 
 export default function WorkExperience() {
@@ -17,13 +15,10 @@ export default function WorkExperience() {
                 <div className='work-experience-right' tabIndex={0} style={{ outline: 'none' }}>
                     {workplaces.map((workplace, idx) => (
                         <div 
-                            key={`${idx}-${workplace}`}
-                            className={`workplace-item ${activeIndex === idx ? 'active' : ''}`}
-                            onClick={() => setActiveIndex(idx)}
-                            role='button'
-                            aria-pressed={activeIndex === idx}
+                            key={idx}
+                            className='workplace-item-container'
                         >
-                            {workplace}
+                            <img src={workplace.image} alt={workplace.name} className='workplace-item-image' />
                         </div>
                     ))}
                 </div>
