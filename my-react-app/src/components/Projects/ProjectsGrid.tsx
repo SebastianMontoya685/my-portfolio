@@ -22,6 +22,12 @@ const cards: ProjectCard[] = [
         to: '/projects/e-invoicing'
     },
     {
+        title: 'Airtable Clone',
+        subtitle: 'Database management application',
+        image: eInvoicingThumb,
+        to: '/projects/airtable-clone'
+    },
+    {
         title: 'JPI Education',
         subtitle: 'Tech Ops foundations and automation',
         image: jpiThumb,

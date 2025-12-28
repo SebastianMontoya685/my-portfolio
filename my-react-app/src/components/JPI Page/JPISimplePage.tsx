@@ -11,16 +11,13 @@ export default function JPISimplePage() {
                     <p className="jpi-simple-role">Tech Ops Engineer</p>
                 </div>
 
-                {/* Video/Image Section */}
+                {/* Image Section */}
                 <div className="jpi-simple-media">
-                    <video 
-                        src="/real-recording.mp4" 
-                        controls 
-                        className="jpi-simple-video"
-                        poster="/JPIeducationlogo.webp"
-                    >
-                        Sorry, your browser does not support embedded videos.
-                    </video>
+                    <img 
+                        src="/JPIeducationlogo.webp" 
+                        alt="JPI Education Logo"
+                        className="jpi-simple-image"
+                    />
                 </div>
 
                 {/* Description Section */}

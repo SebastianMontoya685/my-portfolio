@@ -9,10 +9,13 @@ import WorkExperience from './components/WorkExperience/WorkExperience';
 import OtherExperience from './components/OtherExperience/OtherExperience';
 import JPISimplePage from './components/JPI Page/JPISimplePage';
 import JPIPage from './components/JPI Page/JPIPage'; // Original JPI page (kept for future use)
-import ProjectsPage from './components/Projects/ProjectsPage';
+// import ProjectsPage from './components/Projects/ProjectsPage'; // Original e-invoicing page with folder view
+import EInvoicingPage from './components/Projects/EInvoicingPage';
 // import JPIProjectPage from './components/Projects/JPIProjectPage';
 import ProjectsGrid from './components/Projects/ProjectsGrid';
 import CloudProjectPage from './components/Projects/CloudProjectPage';
+import AirtableClonePage from './components/Projects/AirtableClonePage';
+import LinkedProjectPage from './components/Projects/LinkedProjectPage';
 import ContactPage from './components/Contact/ContactPage';
 import TPRAPage from './components/JPI Page/TPRAPage';
 import UNSWPage from './components/JPI Page/UNSWPage';
@@ -46,7 +49,7 @@ function App() {
           <Route path="/projects/e-invoicing" element={
             <>
             <NavigationBar />
-            <ProjectsPage />
+            <EInvoicingPage />
             <Footer />
           </>
           } />
@@ -54,6 +57,20 @@ function App() {
             <>
             <NavigationBar />
             <CloudProjectPage />
+            <Footer />
+          </>
+          } />
+          <Route path="/projects/airtable-clone" element={
+            <>
+            <NavigationBar />
+            <AirtableClonePage />
+            <Footer />
+          </>
+          } />
+          <Route path="/projects/linked" element={
+            <>
+            <NavigationBar />
+            <LinkedProjectPage />
             <Footer />
           </>
           } />

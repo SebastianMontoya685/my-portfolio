@@ -8,7 +8,7 @@ export default function EInvoicingPage() {
                 {/* Header Section */}
                 <div className="einvoicing-header">
                     <h1 className="einvoicing-title">E-Invoicing</h1>
-                    <p className="einvoicing-subtitle">Airtable Clone Project</p>
+                    <p className="einvoicing-subtitle">Invoice Validation Platform</p>
                 </div>
 
                 {/* Video Section */}
@@ -27,10 +27,14 @@ export default function EInvoicingPage() {
                 <div className="einvoicing-description">
                     <h2>About the Project</h2>
                     <p>
-                        An Airtable clone project that replicates the core functionality of allowing 
-                        a user to create a base and create views/tables in a base. Highlight features 
-                        include allowing a user to add rows to a table in bulk, such as adding 1 million 
-                        rows at once to a table.
+                        Created an application for a client who works in the accounting and financial 
+                        industry. Their main pain point was that they had issues with clients submitting 
+                        invoices that were not valid or missed important information that they needed in 
+                        order to be able to actually process the invoice. I created a web application to 
+                        allow our client to bulk add invoices and determine which ones are valid and which 
+                        ones are not. Invalid invoices are resent to their clients so the client can edit 
+                        it and make it valid. Valid invoices are processed and passed onto the next person 
+                        in the processing chain via email.
                     </p>
                 </div>
             </div>

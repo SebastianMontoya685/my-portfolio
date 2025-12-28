@@ -1,5 +1,6 @@
 import React from 'react';
 import CircularGallery from '../CircularGallery/CircularGallery';
+import { useTheme } from '../../context/ThemeContext';
 import './OtherExperience.css';
 
 const experiences = [

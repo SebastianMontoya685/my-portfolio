@@ -77,6 +77,29 @@
     display: block;
 }
 
+.project-media-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.project-media-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-media-wrapper .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #000;
+}
+
 /* Responsive: stack on smaller screens */
 @media (max-width: 900px) {
     .projects {

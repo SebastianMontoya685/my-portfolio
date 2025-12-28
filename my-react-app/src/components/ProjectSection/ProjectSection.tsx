@@ -6,13 +6,17 @@ const projects = [
     {
         name: 'JPI Education',
         type: 'single',
-        video: '/real-recording.mp4',
+        mediaType: 'image',
+        image: '/JPIeducationlogo.webp',
+        imageBg: '#ffffff',
+        imageContain: true,
         navigateTo: '/jpi',
         clickable: true
     },
     {
         name: 'E-Invoicing Project',
         type: 'single',
+        mediaType: 'video',
         video: '/e-invoicing.mp4',
         navigateTo: '/projects/e-invoicing',
         clickable: true
@@ -20,6 +24,7 @@ const projects = [
     {
         name: 'Airtable Clone',
         type: 'single',
+        mediaType: 'video',
         video: '/real-recording.mp4',
         navigateTo: '/projects',
         clickable: false
@@ -27,9 +32,12 @@ const projects = [
     {
         name: 'LinkedIn Comment Automation Startup',
         type: 'single',
-        video: '/real-recording.mp4',
-        navigateTo: '/projects',
-        clickable: false
+        mediaType: 'image',
+        image: '/BI..png',
+        imageBg: '#000000',
+        imageContain: false,
+        navigateTo: '/projects/linked',
+        clickable: true
     }
 ]
 
@@ -56,10 +64,22 @@ export default function ProjectSection() {
                             style={{ cursor: project.clickable ? 'pointer' : 'default' }}
                         >
                             <h2 className="project-grid-item-title">{project.name}</h2>
-                            <div className="project-video-wrapper">
-                                <video src={project.video} controls onClick={(e) => e.stopPropagation()}>
-                                    Sorry, your browser does not support embedded videos.
-                                </video>
+                            <div 
+                                className="project-media-wrapper"
+                                style={project.imageBg ? { background: project.imageBg } : undefined}
+                            >
+                                {project.mediaType === 'video' ? (
+                                    <video src={project.video} controls onClick={(e) => e.stopPropagation()}>
+                                        Sorry, your browser does not support embedded videos.
+                                    </video>
+                                ) : (
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.name}
+                                        className="project-image"
+                                        style={project.imageContain ? { objectFit: 'contain' } : undefined}
+                                    />
+                                )}
                             </div>
                         </div>
                     ))}
