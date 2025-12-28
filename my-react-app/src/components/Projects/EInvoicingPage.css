@@ -1,0 +1,115 @@
+.einvoicing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    width: 100%;
+    padding: 3rem 5vw;
+    box-sizing: border-box;
+}
+
+.einvoicing-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Header */
+.einvoicing-header {
+    text-align: center;
+}
+
+.einvoicing-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.einvoicing-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Media Section */
+.einvoicing-media {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 6px 24px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Aura glow effect in dark mode */
+[data-theme="dark"] .einvoicing-media {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08), 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+.einvoicing-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--video-bg);
+}
+
+/* Description Section */
+.einvoicing-description {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Aura glow effect in dark mode */
+[data-theme="dark"] .einvoicing-description {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.06), 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.einvoicing-description h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--text-primary);
+}
+
+.einvoicing-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .einvoicing-page {
+        padding: 2rem 4vw;
+    }
+
+    .einvoicing-container {
+        gap: 2rem;
+    }
+
+    .einvoicing-description {
+        padding: 1.5rem;
+    }
+
+    .einvoicing-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .einvoicing-description p {
+        font-size: 1rem;
+    }
+}
+

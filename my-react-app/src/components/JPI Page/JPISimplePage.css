@@ -1,0 +1,174 @@
+.jpi-simple-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    width: 100%;
+    padding: 3rem 5vw;
+    box-sizing: border-box;
+}
+
+.jpi-simple-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Header */
+.jpi-simple-header {
+    text-align: center;
+}
+
+.jpi-simple-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.jpi-simple-role {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Media Section */
+.jpi-simple-media {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 6px 24px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Aura glow effect in dark mode */
+[data-theme="dark"] .jpi-simple-media {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08), 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+.jpi-simple-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--video-bg);
+}
+
+/* Description Section */
+.jpi-simple-description {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Aura glow effect in dark mode */
+[data-theme="dark"] .jpi-simple-description {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.06), 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.jpi-simple-description h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--text-primary);
+}
+
+.jpi-simple-description h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem 0;
+    color: var(--text-primary);
+}
+
+.jpi-simple-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.jpi-simple-description ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.jpi-simple-description li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+/* Tech Badges */
+.jpi-simple-tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.jpi-simple-tech-badges .tech-badge {
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 999px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.jpi-simple-tech-badges .tech-badge:hover {
+    background: var(--hover-bg);
+    transform: translateY(-2px);
+}
+
+/* Aura glow for badges in dark mode */
+[data-theme="dark"] .jpi-simple-tech-badges .tech-badge {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .jpi-simple-tech-badges .tech-badge:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jpi-simple-page {
+        padding: 2rem 4vw;
+    }
+
+    .jpi-simple-container {
+        gap: 2rem;
+    }
+
+    .jpi-simple-description {
+        padding: 1.5rem;
+    }
+
+    .jpi-simple-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .jpi-simple-description h3 {
+        font-size: 1.15rem;
+    }
+
+    .jpi-simple-description p,
+    .jpi-simple-description li {
+        font-size: 1rem;
+    }
+}
+

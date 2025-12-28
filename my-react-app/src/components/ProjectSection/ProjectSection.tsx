@@ -1,53 +1,47 @@
 import React from 'react';
-import ProjectCategorySection from './ProjectCategorySection';
+import { useNavigate } from 'react-router-dom';
 import './ProjectSection.css';
-
-// E-invoicing project images
-const eInvoicingImages = [
-    '/e-invoicing-homedark.jpg',
-    '/e-invoicingdashboard.jpg',
-    '/e-invoicingdashboard2.jpg',
-    '/e-invoicingdashboard3.jpg',
-    '/e-invoicingfiles.jpg',
-    '/e-invoicinghistory.jpg',
-    '/e-invoicinghome.jpg',
-    '/e-invoicinglogin.jpg'
-];
-
-// JPI Education project images
-const jpiEducationImages = [
-    '/JPIeducationlogo.webp',
-    '/jpiprojectoffice.webp'
-];
 
 const projects = [
     {
         name: 'JPI Education',
         type: 'single',
         video: '/real-recording.mp4',
-        navigateTo: '/jpi-project'
+        navigateTo: '/jpi',
+        clickable: true
     },
     {
         name: 'E-Invoicing Project',
         type: 'single',
         video: '/e-invoicing.mp4',
-        navigateTo: '/projects'
+        navigateTo: '/projects/e-invoicing',
+        clickable: true
     },
     {
         name: 'Airtable Clone',
         type: 'single',
         video: '/real-recording.mp4',
-        navigateTo: '/projects'
+        navigateTo: '/projects',
+        clickable: false
     },
     {
         name: 'LinkedIn Comment Automation Startup',
         type: 'single',
         video: '/real-recording.mp4',
-        navigateTo: '/projects'
+        navigateTo: '/projects',
+        clickable: false
     }
 ]
 
 export default function ProjectSection() {
+    const navigate = useNavigate();
+
+    const handleProjectClick = (project: typeof projects[0]) => {
+        if (project.clickable && project.navigateTo) {
+            navigate(project.navigateTo);
+        }
+    };
+
     return (
         <div className='project-section' id='projects'>
             {/* BACKEND Section - JPI Project */}
@@ -55,10 +49,15 @@ export default function ProjectSection() {
                 <h1 className="project-grid-title">Projects.</h1>
                 <div className="projects">
                     {projects.map((project, idx) => (
-                        <div className="project-grid-item" key={idx}>
+                        <div 
+                            className={`project-grid-item ${project.clickable ? 'clickable' : ''}`} 
+                            key={idx}
+                            onClick={() => handleProjectClick(project)}
+                            style={{ cursor: project.clickable ? 'pointer' : 'default' }}
+                        >
                             <h2 className="project-grid-item-title">{project.name}</h2>
                             <div className="project-video-wrapper">
-                                <video src={project.video} controls>
+                                <video src={project.video} controls onClick={(e) => e.stopPropagation()}>
                                     Sorry, your browser does not support embedded videos.
                                 </video>
                             </div>

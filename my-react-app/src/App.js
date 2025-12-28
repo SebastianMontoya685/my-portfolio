@@ -7,7 +7,8 @@ import Footer from './components/Footer/Footer';
 import NavigationBar from './components/navigation/NavigationBar';
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import OtherExperience from './components/OtherExperience/OtherExperience';
-import JPIPage from './components/JPI Page/JPIPage';
+import JPISimplePage from './components/JPI Page/JPISimplePage';
+import JPIPage from './components/JPI Page/JPIPage'; // Original JPI page (kept for future use)
 import ProjectsPage from './components/Projects/ProjectsPage';
 // import JPIProjectPage from './components/Projects/JPIProjectPage';
 import ProjectsGrid from './components/Projects/ProjectsGrid';
@@ -59,11 +60,19 @@ function App() {
           <Route path="/jpi" element={
             <>
             <NavigationBar />
-            <JPIPage />
+            <JPISimplePage />
             <Footer />
           </>
           } />
           <Route path="/jpi-project" element={
+            <>
+            <NavigationBar />
+            <JPISimplePage />
+            <Footer />
+          </>
+          } />
+          {/* Original JPI page with timeline - kept for future use */}
+          <Route path="/jpi-full" element={
             <>
             <NavigationBar />
             <JPIPage />
