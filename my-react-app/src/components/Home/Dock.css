@@ -44,11 +44,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-primary);
 }
 
 .dock-icon img {
   width: 24px;
   height: 24px;
+  transition: filter 0.3s ease;
+}
+
+/* Invert icons in dark mode */
+[data-theme="dark"] .dock-icon img {
+  filter: invert(1);
 }
 
 .dock-label {

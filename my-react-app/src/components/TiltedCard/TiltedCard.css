@@ -40,6 +40,13 @@
   border-radius: 15px;
   will-change: transform;
   transform: translateZ(0);
+  border: 2px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+
+/* Add subtle glow effect in dark mode */
+[data-theme="dark"] .tilted-card-img {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
 }
 
 .tilted-card-overlay {
@@ -65,12 +72,13 @@
   left: 0;
   top: 0;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: var(--bg-primary);
   padding: 4px 10px;
   font-size: 10px;
-  color: #2d2d2d;
+  color: var(--text-primary);
   opacity: 0;
   z-index: 3;
+  border: 1px solid var(--border-color);
 }
 
 

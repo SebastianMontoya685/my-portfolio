@@ -31,6 +31,17 @@
     fill: currentColor;
 }
 
+.icon-box img {
+    width: 26px;
+    height: 26px;
+    transition: filter 0.3s ease;
+}
+
+/* Invert icons in dark mode */
+[data-theme="dark"] .icon-box img {
+    filter: invert(1);
+}
+
 .social-item span {
     font: roboto sans-serif monospace;
     font-weight: 800;
