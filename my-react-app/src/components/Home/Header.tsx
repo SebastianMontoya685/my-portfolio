@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
-import Dock from './Dock';    
+import Dock from './Dock';
+import TextType from '../TextType/TextType';
 
 export default function Header() {
     const scrollToProjects = () => {
@@ -11,7 +12,17 @@ export default function Header() {
         <div className='header-container' id='header'>
             <div className='header'>
                 <div className='header-left'>
-                    <h1 className='header-title'>Sebastian Montoya.</h1>
+                    <TextType
+                        text="Sebastian Montoya."
+                        as="h1"
+                        className="header-title"
+                        typingSpeed={80}
+                        initialDelay={300}
+                        showCursor={true}
+                        cursorCharacter="|"
+                        cursorClassName="header-cursor"
+                        loop={false}
+                    />
                     <button className='header-button' onClick={scrollToProjects}>See More</button>
                 </div>
                 {/* Home-only floating dock */}

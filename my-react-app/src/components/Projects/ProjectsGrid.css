@@ -46,6 +46,15 @@
     border-color: var(--border-medium);
 }
 
+/* Aura glow effect for project cards in dark mode */
+[data-theme="dark"] .projects-grid-page .project-card {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .projects-grid-page .project-card:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
 .projects-grid-page .project-card-image-wrap {
     width: 100%;
     aspect-ratio: 16 / 9;

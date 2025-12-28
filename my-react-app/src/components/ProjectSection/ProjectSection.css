@@ -45,6 +45,15 @@
     box-shadow: 0 12px 32px var(--shadow-strong);
 }
 
+/* Aura glow effect for project cards in dark mode */
+[data-theme="dark"] .project-grid-item {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.06), 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .project-grid-item:hover {
+    box-shadow: 0 0 45px rgba(255, 255, 255, 0.1), 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
 .project-grid-item h2 {
     font-size: 1.5rem;
     font-weight: 700;

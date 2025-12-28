@@ -54,6 +54,15 @@
     box-shadow: 1px 1px 2px var(--shadow-color);
 }
 
+/* Aura glow effect for nav buttons in dark mode */
+[data-theme="dark"] .navigation-bar-right-buttons button {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .navigation-bar-right-buttons button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .theme-toggle-btn {
     font-size: 1.2rem !important;
     padding: 0.4rem 0.6rem !important;

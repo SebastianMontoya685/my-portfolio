@@ -35,6 +35,12 @@
     background: var(--video-bg);
     border: 2px solid var(--border-color);
     box-shadow: 0 6px 24px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Aura glow effect for video wrapper in dark mode */
+[data-theme="dark"] .other-experience-video-wrapper {
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.08), 0 6px 24px rgba(0, 0, 0, 0.5);
 }
 
 .other-experience-video-wrapper video {

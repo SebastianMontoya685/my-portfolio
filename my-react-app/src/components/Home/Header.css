@@ -67,6 +67,20 @@
     text-shadow: 0 0 1px var(--text-primary);
 }
 
+/* TextType cursor styling */
+.header-title .text-type__content {
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.header-cursor {
+    font-weight: 400;
+    color: var(--text-primary);
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    margin-left: 0.1em;
+}
+
 .underlined-text {
     text-decoration: underline;
 }
@@ -93,6 +107,15 @@
     border-color: var(--border-medium);
     transform: translateY(-2px) scale(1.02);
     box-shadow: 1px 1px 2px 2.5px var(--shadow-color);
+}
+
+/* Aura glow effect for header button in dark mode */
+[data-theme="dark"] .header-button {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .header-button:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.12), 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .header-right-container a {
